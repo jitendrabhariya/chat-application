@@ -11,21 +11,23 @@ const getCurrentUser = ()=>{
         const fetchUser=async ()=>{
             try {
                 let result= await axios.get(`${serverUrl}/api/user/current`,{withCredentials:true})
-                 if (JSON.stringify(result.data) !== JSON.stringify(userData))
-                     {
+                 
+                
                       dispatch(setUserData(result.data))
-                      }
+                      
                 
                      console.log(userData)
                 
             } catch (error) {
+                dispatch(setUserData(null))
                 console.log(error)
+                
             }
 
         }
         fetchUser()
 
 
-    } ,[userData])
+    } ,[])
 }
 export default getCurrentUser
