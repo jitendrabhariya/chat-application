@@ -12,7 +12,7 @@ import { app, server } from "./socket/socket.js"
 
  const port=process.env.PORT 
  app.use(cors({
-  origin:"http://localhost:5173",
+  origin:"https://realtimechatapp-qp86.onrender.com",
   credentials:true
 
  }))
