@@ -45,7 +45,7 @@
     if(!ifMatch){
         return res.status(400).json({ message:"incorrect password"})
     }
-     const token =await genToken( User._id)
+     const token =await genToken( user._id)
      res.cookie( "token",token,{
         httpOnly:true,
         maxAge:7*24*60*60*1000,
