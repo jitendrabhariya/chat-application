@@ -6,7 +6,7 @@ import { upload } from "../middlewares/multer.js"
 const userRouter=express.Router()
 userRouter.get("/current" ,isAuth ,getCurrentUser)
 userRouter.put("/profile" ,isAuth,upload.single("image"),editProfile)
-userRouter.get("/others"  ,getOtherUsers)
+userRouter.get("/others",isAuth  ,getOtherUsers)
 userRouter.get("/search" ,isAuth ,search)
 export default userRouter
  
