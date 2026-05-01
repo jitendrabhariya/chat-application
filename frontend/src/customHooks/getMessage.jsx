@@ -23,6 +23,6 @@ const getMessage = ()=>{
         fetchMessages()
 
 
-    } ,[selectUser,userData])
+    } ,[selectUser])
 }
 export default getMessage
