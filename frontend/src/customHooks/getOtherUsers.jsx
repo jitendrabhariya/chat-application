@@ -22,7 +22,7 @@ const getOtherUsers = ()=>{
             }
 
         }
-        if(userData){
+        
         fetchUser()
         }
 
